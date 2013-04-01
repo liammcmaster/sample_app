@@ -1,0 +1,13 @@
+<div class="user_info">
+  <a href="<%= user_path(current_user) %>">
+    <%= gravatar_for current_user, :size => 60 %></a>
+      <span class="user_name">
+        <h1><%= current_user.name %></h1>
+      </span>
+      <span class="view_link">
+        <%= link_to "View my profile", current_user %>
+      </span>
+      <span class="microposts">
+        <%= pluralize(current_user.microposts.count, "micropost") %>
+      </span>
+</div>
